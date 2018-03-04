@@ -19,8 +19,10 @@ public class StateMachineTest {
      */
     @Test
     public void test_1() {
+    	System.out.println("Test Sequence: A");
         sc.actionA();
         assertTrue(sc.isAccept());
+    	System.out.println("--------------------------");
     }
     
     /*
@@ -28,8 +30,10 @@ public class StateMachineTest {
      */
     @Test
     public void test_2() {
+    	System.out.println("Test Sequence: B");
         sc.actionB();
         assertTrue(sc.isAccept());
+    	System.out.println("--------------------------");
     }
     
     /*
@@ -37,6 +41,7 @@ public class StateMachineTest {
      */
     @Test
     public void test_3() {
+    	System.out.println("Test Sequence: ABABA");
         sc.actionA();
         assertTrue(sc.isAccept());
         sc.actionB();
@@ -47,6 +52,7 @@ public class StateMachineTest {
         assertFalse(sc.isAccept());
         sc.actionA();
         assertTrue(sc.isAccept());
+    	System.out.println("--------------------------");
     }
     
     /*
@@ -54,10 +60,12 @@ public class StateMachineTest {
      */
     @Test
     public void test_4() {
+    	System.out.println("Test Sequence: BAB");
         sc.actionB();
         sc.actionA();
         sc.actionB();
         assertTrue(sc.isAccept());
+    	System.out.println("--------------------------");
     }
     
     /*
@@ -65,10 +73,12 @@ public class StateMachineTest {
      */
     @Test
     public void test_5() {
+    	System.out.println("Test Sequence: AAB");
         sc.actionA();
         sc.actionA();
         sc.actionB();
         assertFalse(sc.isAccept());
+    	System.out.println("--------------------------");
     }
     
     /*
@@ -76,9 +86,11 @@ public class StateMachineTest {
      */
     @Test
     public void test_6() {
+    	System.out.println("Test Sequence: BAA");
         sc.actionB();
         sc.actionA();
         sc.actionA();
         assertFalse(sc.isAccept());
+    	System.out.println("--------------------------");
     }
 }
